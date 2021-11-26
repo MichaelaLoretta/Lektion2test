@@ -63,7 +63,7 @@ export default function App() {
       <Device deviceName="TV"></Device>
       </View>
 
-      <Text>Total devices on </Text>
+      <Text style={styles.bottomText}>Total devices on: </Text>
 
       <StatusBar style="auto" />
     </View>
@@ -85,15 +85,15 @@ const styles = StyleSheet.create({
 
   },
   logo: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
     margin: 15,
     
     
   },
 
   logoText: {
-    fontSize: "1rem",
+    fontSize: "2rem",
     fontWeight: "bold",
     color: "pink",
 
@@ -129,8 +129,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: "2rem",
     marginLeft: 15,
-    marginBottom: 0,
+    marginBottom: 5,
   },
+
+  bottomText: {
+    fontWeight: "bold",
+    fontSize: "1rem",
+    marginLeft: 15,
+    marginBottom: 5,
+  }
 
 
 });
