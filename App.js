@@ -6,7 +6,7 @@ import { StyleSheet, Text, TextInput, View, Button, Image } from "react-native";
 
 import { useState } from "react"; //importerat möjligheten att ändra på variabler
 
-import Cat from "./src/Cat"; //importerar min custom component Cat
+
 import MyButton from "./src/MyButton";
 import Device from "./src/Device";
 
@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
+
     
 
   },
