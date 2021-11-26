@@ -30,12 +30,12 @@ export default function App() {
 
       <View style={styles.header}>
         <Image style={styles.logo} source={require("./assets/house.png")}></Image>
-        <View><Text style={styles.logoText}>SmartHome</Text></View>
+        <Text style={styles.logoText}>SmartHome</Text>
       </View>
 
       <Text style={styles.boldText}>Rooms</Text>
       
-      <View style={styles.menu}>
+      <View style={styles.header}>
 
       <View style={styles.roomBox}>
       <Image style={styles.roomImg} source={require("./assets/livingroom.png")}></Image>
@@ -57,55 +57,13 @@ export default function App() {
 
       <Text style={styles.boldText}>Devices</Text>
 
-
+      <View style={styles.devices}>
       <Device deviceName="Living Room Lamp"></Device>
       <Device deviceName="Heater"></Device>
       <Device deviceName="TV"></Device>
-
+      </View>
 
       <Text>Total devices on </Text>
-
-
-
-      <Text style={{ color: textColor }}>This text is {textColor} color</Text>
-      <TextInput
-        placeholder="Enter A Color"
-        value={inputValue}
-        onChangeText={(value) => setInputValue(value)}
-      />
-
-
-      <View style={{ margin: 15 }}>
-        <Button
-          style={styles.buttons}
-          title="Set Text Color"
-          onPress={() => setTextColor(inputValue)}
-        />
-      </View>
-
-      <Text style={{ fontSize: textSize }}>This text is {textSize} </Text>
-      <TextInput
-        placeholder="Enter A font size in px"
-        value={inputValue2}
-        onChangeText={(value) => setInputValue2(value)}
-      />
-
-      <View style={{ margin: 15 }}>
-        <Button
-          style={styles.buttons}
-          title="Set Font Size"
-          onPress={() => setTextSize(inputValue2)}
-        />
-      </View>
-
-      <Cat name="korv"></Cat>
-
-      <View style={styles.menuView}>
-        <MyButton btnText="Home"></MyButton>
-        <MyButton btnText="About"></MyButton>
-        <MyButton btnText="Contact"></MyButton>
-        <MyButton btnText="Blog"></MyButton>
-      </View>
 
       <StatusBar style="auto" />
     </View>
@@ -119,13 +77,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     
   },
-  menuView: {
+  header: {
     flexDirection: "row",
+    alignItems: "center",
+    
+
   },
   logo: {
     width: 50,
     height: 50,
     margin: 15,
+    
     
   },
 
@@ -133,25 +95,19 @@ const styles = StyleSheet.create({
     fontSize: "1rem",
     fontWeight: "bold",
     color: "pink",
-    marginTop: 30,
 
   },
 
-  header: {
-    justifyContent: "flex-start",
-    flexDirection: "row",
-    alignContent: "space-between",
-
-  },
 
   roomBox: {
-    width: 100,
-    height: 100,
+    width: 110,
+    height: 110,
     borderRadius: 10,
     backgroundColor: "pink",
     margin: 15,
-    justifyContent: "center",
-    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "space-around",
+
 
   },
 
@@ -163,12 +119,10 @@ const styles = StyleSheet.create({
 
   },
 
-  menu: {
+  devices: {
+    flexDirection:"column",
     alignContent: "space-between",
-    flexDirection: "row",
-
   },
-
 
   boldText: {
     fontWeight: "bold",

@@ -7,7 +7,7 @@ import {  Text, View, StyleSheet} from "react-native";
 const MyButton = (props) => {
     return(
         <View style={styles.btn}>
-            <Text style={styles.boldText}>{props.btnText}</Text>
+            <Text style={styles.btnText}>{props.btnText}</Text>
 
         </View>
         
@@ -18,20 +18,19 @@ const MyButton = (props) => {
 };
 const styles = StyleSheet.create({
     btn: {
-        width: 100,
-        height: 40,
-      backgroundColor: '#eee',
+      width: 30,
+      height: 30,
+      backgroundColor: '#fff',
       justifyContent: "center",
-      textAlign: "center",
-      margin: 20,
-      borderRadius: 25,
-      borderColor: "#ee5",
-      borderWidth: 2,
+      alignItems: "center",
+      margin: 1,
+      borderRadius: 10,
+    
      
     },
     boldText: {
-      fontSize: "19px",
-      fontWeight: "bold",
+      fontSize: "16px",
+      fontWeight: 300,
     }
   });
 
